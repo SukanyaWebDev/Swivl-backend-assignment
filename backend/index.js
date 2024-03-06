@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
-const port = 5001; // Change the port to 5001
+const port = 5001; 
 
 app.use(bodyParser.json());
 

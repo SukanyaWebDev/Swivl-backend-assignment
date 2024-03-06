@@ -138,6 +138,51 @@ class Recipe {
   }
 }
 
+// // Authentication Middleware
+// function authenticate(req, res, next) {
+//   const token = req.headers.authorization.split(' ')[1];
+//   if (token) {
+//     jwt.verify(token, 'secret_key', (err, decoded) => {
+//       if (err) {
+//         return res.status(401).json({ error: 'Invalid token' });
+//       } else {
+//         req.username = decoded.username;
+//         next();
+//       }
+//     });
+//   } else {
+//     return res.status(401).json({ error: 'Token not provided' });
+//   }
+// }
+// Authentication Middleware
+function authenticate(req, res, next) {
+    const authorizationHeader = req.headers.authorization;
+  
+    // Check if Authorization header is present
+    if (!authorizationHeader) {
+      return res.status(401).json({ error: 'Authorization header not provided' });
+    }
+  
+    const token = authorizationHeader.split(' ')[1];
+  
+    // Check if token is present
+    if (token) {
+      jwt.verify(token, 'secret_key', (err, decoded) => {
+        if (err) {
+          return res.status(401).json({ error: 'Invalid token' });
+        } else {
+          req.username = decoded.username;
+          next();
+        }
+      });
+    } else {
+      return res.status(401).json({ error: 'Token not provided' });
+    }
+  }
+  
+  
+  
+
 // Database Initialization
 db.serialize(() => {
   db.run(`CREATE TABLE IF NOT EXISTS users (
@@ -187,23 +232,22 @@ app.post('/login', async (req, res) => {
   }
 });
 
-app.put('/profile', async (req, res) => {
+app.put('/profile', authenticate, async (req, res) => {
   try {
     const { email } = req.body;
-    const token = req.headers.authorization.split(' ')[1];
-    const decoded = jwt.verify(token, 'secret_key');
-    const username = decoded.username;
-
-    const updateUser = new User(username, null, email);
+    const updateUser = new User(req.username, null, email);
     const result = await updateUser.manageProfile(email);
     res.json({ message: result });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
+  
 });
 
+
+
 // Recipe routes
-app.post('/recipes', async (req, res) => {
+app.post('/recipes', authenticate, async (req, res) => {
   try {
     const { title, description, ingredients, instructions, images } = req.body;
     const newRecipe = new Recipe(title, description, ingredients, instructions, images);
@@ -214,7 +258,7 @@ app.post('/recipes', async (req, res) => {
   }
 });
 
-app.get('/recipes/:id', async (req, res) => {
+app.get('/recipes/:id', authenticate, async (req, res) => {
   try {
     const recipeId = req.params.id;
     const recipe = await new Recipe().readRecipe(recipeId);
@@ -224,7 +268,7 @@ app.get('/recipes/:id', async (req, res) => {
   }
 });
 
-app.put('/recipes/:id', async (req, res) => {
+app.put('/recipes/:id', authenticate, async (req, res) => {
   try {
     const recipeId = req.params.id;
     const updatedData = req.body;
@@ -235,7 +279,7 @@ app.put('/recipes/:id', async (req, res) => {
   }
 });
 
-app.delete('/recipes/:id', async (req, res) => {
+app.delete('/recipes/:id', authenticate, async (req, res) => {
   try {
     const recipeId = req.params.id;
     const result = await new Recipe().deleteRecipe(recipeId);
@@ -248,4 +292,3 @@ app.delete('/recipes/:id', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-

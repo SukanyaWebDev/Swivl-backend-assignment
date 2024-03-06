@@ -9,18 +9,6 @@ Content-Type: application/json
 }
 
 ###
-
-# Register a new user
-POST http://localhost:5001/register
-Content-Type: application/json
-
-{
-  "username": "ashok",
-  "password": "ashokKumar",
-  "email": "ashok123@gmail.com"
-}
-
-###
 # Login with the newly registered user
 POST http://localhost:5001/login
 Content-Type: application/json
@@ -30,21 +18,12 @@ Content-Type: application/json
   "password": "newPassword"
 }
 
-###
 
-# Login with the newly registered user
-POST http://localhost:5001/login
-Content-Type: application/json
-
-{
-  "username": "ashok",
-  "password": "ashokKumar"
-}
 ###
 # Update user profile
 PUT http://localhost:5001/profile
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MTU4MzksImV4cCI6MTcwOTcxOTQzOX0.VGkVmWjsvJS_JXH1JCoGCz_sgoR_wwF-IHe0W4XlJeY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
 
 {
   "email": "updatedEmail@example.com"
@@ -52,42 +31,72 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld
 
 ###
 
-# Create a new recipe
+#Create new recipe1
 POST http://localhost:5001/recipes
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
 
 {
-  "title": "New Recipe",
-  "description": "Recipe Description",
-  "ingredients": "Ingredient 1, Ingredient 2",
-  "instructions": "Step 1, Step 2",
-  "images": "recipe_image.jpg"
+  "title": "Pizza",
+  "description": "Pizza is an Italian dish of flat, open-faced baked pie. It's made of a flattened disk of dough topped with various ingredients and baked quickly. The crust can range in thickness from 1/8 to 1/4 inch",
+  "ingredients": "flour, dry yeast, warm water, onion, tomato, capsicum, and different kinds of cheese along with tomato ketchup",
+  "instructions": "1.Start with a solid pizza dough recipe, 2.Make the dough, 3.Proof the dough, 4.Prepare the sauce and toppings, 5.Shape the dough, 6.Bake the pizza, 7.Cool the pizza",
+  "images": "pizza_image1.jpg"
+}
+
+###
+
+#Create new recipe2
+POST http://localhost:5001/recipes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+
+{
+  "title": "Whipped Skyr",
+  "description": "Skyr is a very common Icelandic dish similar to yogurt that can be eaten for breakfast or dessert (or anytime) because it’s delicious, but also healthy and full of protein",
+  "ingredients": "500 gr plain skyr,50 gr icing sugar,150 ml heavy cream",
+  "instructions": "1.Place all the ingredients in a bowl,whip together until the skyr becomes light and fluffy,2.Place the whipped skyr in a glass bowl, drizzle the blueberry sauce on top of the mousse. Sprinkle with oats, and garnish with blueberries and raspberries",
+  "images": "pizza_image1.jpg"
 }
 
 
 ###
 
-# Retrieve a specific recipe (replace <recipe_id> with an actual recipe ID)
-GET http://localhost:5001/recipes/2
+#Create new recipe3
+POST http://localhost:5001/recipes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+
+{
+  "title": "Sweet Corn Bisque",
+  "description": "It's a deliciously easy broth made by boiling stripped corn cobs in water to extract a wonderful corn flavor. It adds a next level corn flavor ...",
+  "ingredients": "10 oz Sweet corn kernels,8oz Heavy cream,8 oz Milk,4 oz White wine,1 oz Turmeric",
+  "instructions": "1.Sauté the vegetables until the onion is translucent,2.Deglaze with white wine and reduce by half,3.Add heavy cream, chicken stock, coriander and cumin seeds, and turmeric.",
+  "images":"Sweet_image.jpg"
+}
 
 
 ###
-# Update a specific recipe (replace <recipe_id> with an actual recipe ID)
-PUT http://localhost:5001/recipes/3
+
+#Create new recipe 4
+POST http://localhost:5001/recipes
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
 
 {
-  "title": "Updated Recipe",
-  "description": "Updated Recipe Description",
-  "ingredients": "Updated Ingredient 1, Updated Ingredient 2",
-  "instructions": "Updated Step 1, Updated Step 2",
-  "images": "updated_recipe_image.jpg"
+  "title": "Pastechi",
+  "description": "Pastechi is a savory, cheese-filled pastry from Aruba in the Caribbean, akin to an empanada. If anything, it is an excellent comfort food and fun to make.",
+  "ingredients": "4 cups flour ,4 tbsp soft butter,4 tbsp Crisco ,2 tbsp sugar,1 tsp Salt ,1 medium egg",
+  "instructions": "1.Add flour, butter, Crisco, sugar, salt, egg and 1cup of cold water  to a stand mixer with the paddle attachment. Knead the dough until it’s totally smooth and not sticky (mixed for about 10-15 minutes) let the dough rest for about 30 minutes ,2.Make balls of 3 ounces each out of the dough. Roll the balls to create a flat, thin circle out of every ball,3.Flat each circle with shredded Gouda cheese. About 1.5 ounce of cheese for each pastechi,4.Fry the pastechis in hot vegetable oil 350*F to 375*F . Until is golden brown. Enjoy while they’re hot.",
+  "images": "pastechi_image1.jpg"
 }
 
 ### 
-# Create a new recipe
+# Create a new recipe 5
 POST http://localhost:5001/recipes
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+
 
 {
   "title": "New Recipe3",
@@ -97,6 +106,33 @@ Content-Type: application/json
   "images": "recipe_image.jpg"
 }
 
+
 ###
-# Delete a specific recipe (replace <recipe_id> with an actual recipe ID)
-DELETE http://localhost:5001/recipes/3
+
+# Retrieve a specific recipe using id 
+GET http://localhost:5001/recipes/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+
+
+###
+
+# Update a specific recipe using id
+PUT http://localhost:5001/recipes/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+
+{
+  "title": "Updated Recipe",
+  "description": "Updated Recipe Description",
+  "ingredients": "Updated Ingredient 1, Updated Ingredient 2",
+  "instructions": "Updated Step 1, Updated Step 2",
+  "images": "updated_recipe_image.jpg"
+}
+
+
+
+###
+# Delete a specific recipe with id
+DELETE http://localhost:5001/recipes/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+

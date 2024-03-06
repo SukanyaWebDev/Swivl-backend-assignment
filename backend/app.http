@@ -1,0 +1,102 @@
+# Register a new user
+POST http://localhost:5001/register
+Content-Type: application/json
+
+{
+  "username": "newUser",
+  "password": "newPassword",
+  "email": "newUser@example.com"
+}
+
+###
+
+# Register a new user
+POST http://localhost:5001/register
+Content-Type: application/json
+
+{
+  "username": "ashok",
+  "password": "ashokKumar",
+  "email": "ashok123@gmail.com"
+}
+
+###
+# Login with the newly registered user
+POST http://localhost:5001/login
+Content-Type: application/json
+
+{
+  "username": "newUser",
+  "password": "newPassword"
+}
+
+###
+
+# Login with the newly registered user
+POST http://localhost:5001/login
+Content-Type: application/json
+
+{
+  "username": "ashok",
+  "password": "ashokKumar"
+}
+###
+# Update user profile
+PUT http://localhost:5001/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MTU4MzksImV4cCI6MTcwOTcxOTQzOX0.VGkVmWjsvJS_JXH1JCoGCz_sgoR_wwF-IHe0W4XlJeY
+
+{
+  "email": "updatedEmail@example.com"
+}
+
+###
+
+# Create a new recipe
+POST http://localhost:5001/recipes
+Content-Type: application/json
+
+{
+  "title": "New Recipe",
+  "description": "Recipe Description",
+  "ingredients": "Ingredient 1, Ingredient 2",
+  "instructions": "Step 1, Step 2",
+  "images": "recipe_image.jpg"
+}
+
+
+###
+
+# Retrieve a specific recipe (replace <recipe_id> with an actual recipe ID)
+GET http://localhost:5001/recipes/2
+
+
+###
+# Update a specific recipe (replace <recipe_id> with an actual recipe ID)
+PUT http://localhost:5001/recipes/3
+Content-Type: application/json
+
+{
+  "title": "Updated Recipe",
+  "description": "Updated Recipe Description",
+  "ingredients": "Updated Ingredient 1, Updated Ingredient 2",
+  "instructions": "Updated Step 1, Updated Step 2",
+  "images": "updated_recipe_image.jpg"
+}
+
+### 
+# Create a new recipe
+POST http://localhost:5001/recipes
+Content-Type: application/json
+
+{
+  "title": "New Recipe3",
+  "description": "Recipe Description3",
+  "ingredients": "Ingredient 1, Ingredient 2 Ingredient 3",
+  "instructions": "Step 1, Step 2 Step 3",
+  "images": "recipe_image.jpg"
+}
+
+###
+# Delete a specific recipe (replace <recipe_id> with an actual recipe ID)
+DELETE http://localhost:5001/recipes/3

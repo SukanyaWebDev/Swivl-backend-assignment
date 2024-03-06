@@ -17,7 +17,7 @@ This project serves as the backend for the Recipe Sharing Platform with OOP, pro
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/swivl-backend-assignment.git
+git clone https://github.com/SukanyaWebDev/Swivl-backend-assignment.git
 
 ### Usage
 

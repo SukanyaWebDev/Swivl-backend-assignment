@@ -23,8 +23,7 @@ Content-Type: application/json
 # Update user profile
 PUT http://localhost:5001/profile
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzU5MTEsImV4cCI6MTcwOTczOTUxMX0._q5wOh9-XIZ_V46p4wZBmsZHguaFa7nj2FIVlD_TPcI
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3NDY2NjAsImV4cCI6MTcwOTc1MDI2MH0.jkKIcLwdyiHmZUpK9RtPQjxuCYlrC1kJIESMRG__eWU
 {
   "email": "updatedEmail@example.com"
 }

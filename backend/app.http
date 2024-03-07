@@ -23,7 +23,8 @@ Content-Type: application/json
 # Update user profile
 PUT http://localhost:5001/profile
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3NDY2NjAsImV4cCI6MTcwOTc1MDI2MH0.jkKIcLwdyiHmZUpK9RtPQjxuCYlrC1kJIESMRG__eWU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk4MDE5MjQsImV4cCI6MTcwOTgwNTUyNH0.t8VShhWef0FOTYirDtLgpL3fdffEJdxwbHDIVVr3LHc
+
 {
   "email": "updatedEmail@example.com"
 }
@@ -33,7 +34,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld
 #Create new recipe1
 POST http://localhost:5001/recipes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk4MDE5MjQsImV4cCI6MTcwOTgwNTUyNH0.t8VShhWef0FOTYirDtLgpL3fdffEJdxwbHDIVVr3LHc
+
 
 {
   "title": "Pizza",
@@ -48,7 +50,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld
 #Create new recipe2
 POST http://localhost:5001/recipes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk4MDE5MjQsImV4cCI6MTcwOTgwNTUyNH0.t8VShhWef0FOTYirDtLgpL3fdffEJdxwbHDIVVr3LHc
+
 
 {
   "title": "Whipped Skyr",
@@ -64,7 +67,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld
 #Create new recipe3
 POST http://localhost:5001/recipes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk4MDE5MjQsImV4cCI6MTcwOTgwNTUyNH0.t8VShhWef0FOTYirDtLgpL3fdffEJdxwbHDIVVr3LHc
 
 {
   "title": "Sweet Corn Bisque",
@@ -80,7 +83,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld
 #Create new recipe 4
 POST http://localhost:5001/recipes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk4MDE5MjQsImV4cCI6MTcwOTgwNTUyNH0.t8VShhWef0FOTYirDtLgpL3fdffEJdxwbHDIVVr3LHc
 
 {
   "title": "Pastechi",
@@ -94,7 +97,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld
 # Create a new recipe 5
 POST http://localhost:5001/recipes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk4MDE5MjQsImV4cCI6MTcwOTgwNTUyNH0.t8VShhWef0FOTYirDtLgpL3fdffEJdxwbHDIVVr3LHc
 
 
 {
@@ -110,15 +113,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld
 
 # Retrieve a specific recipe using id 
 GET http://localhost:5001/recipes/6
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk4MDE5MjQsImV4cCI6MTcwOTgwNTUyNH0.t8VShhWef0FOTYirDtLgpL3fdffEJdxwbHDIVVr3LHc
 
 ###
 
 # Update a specific recipe using id
 PUT http://localhost:5001/recipes/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk4MDE5MjQsImV4cCI6MTcwOTgwNTUyNH0.t8VShhWef0FOTYirDtLgpL3fdffEJdxwbHDIVVr3LHc
 
 {
   "title": "Updated Recipe",
@@ -133,5 +135,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld
 ###
 # Delete a specific recipe with id
 DELETE http://localhost:5001/recipes/6
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk3MzMyMjIsImV4cCI6MTcwOTczNjgyMn0.YFKaAbB6DBQSM1bOz0CqRYoEeuv73bcAF_uULjBxmQs
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5ld1VzZXIiLCJpYXQiOjE3MDk4MDE5MjQsImV4cCI6MTcwOTgwNTUyNH0.t8VShhWef0FOTYirDtLgpL3fdffEJdxwbHDIVVr3LHc
